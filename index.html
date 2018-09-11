@@ -22,7 +22,23 @@
     "price": "962500"
   }];
 
+/*
+By default, the sort() function sorts values as strings.
 
+This works well for strings ("Apple" comes before "Banana").
+
+However, if numbers are sorted as strings, "25" is bigger than "100", because "2" is bigger than "1".
+
+Because of this, the sort() method will produce incorrect result when sorting numbers.
+
+You can fix this by providing a compare function:
+
+The purpose of the compare function is to define an alternative sort order.
+
+The compare function should return a negative, zero, or positive value, depending on the arguments:
+
+
+ */
 
   homes.sort(function(a, b) {
     return parseFloat(a.price) - parseFloat(b.price);
